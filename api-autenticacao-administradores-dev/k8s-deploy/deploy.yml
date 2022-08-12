@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-admin
+  namespace: grupo01
+  labels:
+    app: api-admin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-admin
+  template:
+    metadata:
+      name: api-admin
+      labels:
+        app: api-admin
+    spec:
+      containers:
+        - name: api-admin
+          image: brunodelucasbarbosa/api-autenticacao-administradores
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: grupo01-rds
+                  key: DATABASE_URL
+            - name: DATABASE_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: grupo01-rds
+                  key: DATABASE_ADMIN
+            - name: DATABASE_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: grupo01-rds
+                  key: DATABASE_USER
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: grupo01-rds-secret
+                  key: DATABASE_PASSWORD
+            - name: EMISSOR
+              value: "<EMISSOR>"
+            - name: PRIVATE_KEY
+              value: "<PRIVATE-KEY>"
+            - name: SECRET_KEY
+              value: "<SECRET-KEY>"
+            - name: TOKEN_PREFIX
+              value: "<TOKEN-PREFIX>"
+            - name: EXPIRATION_SECONDS
+              value: "<EXPIRATION-SECONDS>"
+            - name: EXPIRATION_MINUTES
+              value: "<EXPIRATION-MINUTES>"
+            - name: EXPIRATION_HOURS
+              value: "<EXPIRATION-HOURS>"
+            - name: EXPIRATION_DAYS
+              value: "<EXPIRATION-DAYS>"
+

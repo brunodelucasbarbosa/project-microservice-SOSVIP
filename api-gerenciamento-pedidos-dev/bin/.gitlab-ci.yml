@@ -1,0 +1,41 @@
+stages:
+  - build
+  - test
+  - package
+
+maven-build:
+  image: maven:3.8.3-openjdk-17
+  stage: build
+  script: "mvn package -Dmaven.test.skip -B"
+  artifacts:
+    paths:
+      - target/*.jar
+
+test:
+  image: maven:3.8.3-openjdk-17
+  stage: test
+  script: "mvn test"
+  artifacts:
+    paths:
+      - target/*.jar
+  dependencies:
+    - maven-build
+
+docker-build:
+  stage: package
+  image: docker
+  services:
+    - docker:dind
+
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+
+  script:
+    - docker build -t brunodelucasbarbosa/api-gerenciamento-pedidos -f Dockerfile .
+    - docker push brunodelucasbarbosa/api-gerenciamento-pedidos
+
+  only:
+    - dev
+
+  dependencies:
+    - test

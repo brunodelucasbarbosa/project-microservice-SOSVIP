@@ -1,0 +1,13 @@
+.button-trocar-view {
+  border: none;
+  background: #04C45C;
+  border-radius: 8px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 1.5rem 10rem;
+}

@@ -1,0 +1,32 @@
+2022-06-17T20:21:19,901-0300 [30702 1] com.newrelic INFO: Writing to New Relic log file: /Users/italo.costa/Projetos/Projeto_Final_ilab/api-gerenciamento-clientes/logs/newrelic_agent.log
+2022-06-17T20:21:19,901-0300 [30702 1] com.newrelic INFO: JRE vendor Oracle Corporation version 18.0.1.1
+2022-06-17T20:21:19,901-0300 [30702 1] com.newrelic INFO: JVM vendor Oracle Corporation Java HotSpot(TM) 64-Bit Server VM version 18.0.1.1+2-6
+2022-06-17T20:21:19,901-0300 [30702 1] com.newrelic INFO: OS Mac OS X version 12.3.1 arch x86_64
+2022-06-17T20:21:19,902-0300 [30702 1] com.newrelic INFO: Agent Host: MacBook-Pro.local IP: 127.0.0.1
+2022-06-17T20:21:19,902-0300 [30702 1] com.newrelic INFO: New Relic Agent v7.8.0 is initializing...
+2022-06-17T20:21:20,954-0300 [30702 17] com.newrelic INFO: Instrumentation com.newrelic.instrumentation.jdbc-resultset is disabled. Skipping.
+2022-06-17T20:21:22,984-0300 [30702 1] com.newrelic.agent.RPMServiceManagerImpl INFO: Configured to connect to New Relic at collector.newrelic.com:443
+2022-06-17T20:21:23,709-0300 [30702 1] com.newrelic INFO: Setting audit_mode to false
+2022-06-17T20:21:23,971-0300 [30702 1] com.newrelic.agent.config.ConfigServiceImpl INFO: Configuration file is /Users/italo.costa/Projetos/Projeto_Final_ilab/api-gerenciamento-clientes/./newrelic.yml
+2022-06-17T20:21:23,979-0300 [30702 1] com.newrelic INFO: New Relic Agent v7.8.0 has started
+2022-06-17T20:21:23,980-0300 [30702 1] com.newrelic INFO: Agent class loader: com.newrelic.bootstrap.BootstrapAgent$JVMAgentClassLoader@5e8c92f4
+2022-06-17T20:21:23,981-0300 [30702 1] com.newrelic INFO: Premain startup complete in 5,222ms
+2022-06-17T20:21:38,009-0300 [30702 1] com.newrelic INFO: Server Info: Apache Tomcat/9.0.63
+2022-06-17T20:21:54,041-0300 [30702 41] com.newrelic INFO: Host name is MacBook-Pro.local, display host MacBook-Pro.local for application api-gerenciamento-clientes
+2022-06-17T20:21:54,057-0300 [30702 41] com.newrelic INFO: New Relic JFR Monitor is disabled: JFR config has not been enabled in the Java agent.
+2022-06-17T20:21:54,912-0300 [30702 41] com.newrelic INFO: Collector redirection to collector-006.newrelic.com:443
+2022-06-17T20:21:56,532-0300 [30702 41] com.newrelic INFO: Max payload size is 1,000,000 bytes
+2022-06-17T20:21:56,532-0300 [30702 41] com.newrelic INFO: Agent run id: BTqp3sfSlMAxADW0VEKRoUdirQzUAAIBAAAnIQEAAHfuAgRCkZ7lAwAFNy44LjAAEU1hY0Jvb2stUHJvLmxvY2FsABphcGktZ2VyZW5jaWFtZW50by1jbGllbnRlcw
+2022-06-17T20:21:56,535-0300 [30702 41] com.newrelic INFO: Agent 30702@MacBook-Pro.local/api-gerenciamento-clientes connected to collector.newrelic.com:443
+2022-06-17T20:21:56,538-0300 [30702 41] com.newrelic INFO: Reporting to: https://rpm.newrelic.com/accounts/3519572/applications/1116839653
+2022-06-17T20:21:56,543-0300 [30702 41] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2022-06-17T20:21:56,543-0300 [30702 41] com.newrelic INFO: Using default metric ingest URI: https://metric-api.newrelic.com/metric/v1
+2022-06-17T20:21:56,543-0300 [30702 41] com.newrelic INFO: Using default event ingest URI: https://insights-collector.newrelic.com/v1/accounts/events
+2022-06-17T20:21:56,557-0300 [30702 41] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2022-06-17T20:21:56,557-0300 [30702 41] com.newrelic INFO: Using default metric ingest URI: https://metric-api.newrelic.com/metric/v1
+2022-06-17T20:21:56,557-0300 [30702 41] com.newrelic INFO: Using default event ingest URI: https://insights-collector.newrelic.com/v1/accounts/events
+2022-06-17T20:21:57,722-0300 [30702 41] com.newrelic INFO: Real user monitoring is enabled for application api-gerenciamento-clientes. Auto instrumentation is enabled.
+2022-06-17T20:21:57,727-0300 [30702 41] com.newrelic INFO: New Relic JFR Monitor is disabled: JFR config has not been enabled in the Java agent.
+2022-06-17T20:27:55,256-0300 [30702 15] com.newrelic.agent.core.CoreServiceImpl INFO: JVM is shutting down
+2022-06-17T20:27:55,357-0300 [30702 45] com.newrelic INFO: Transaction com.newrelic.agent.Transaction@1325c2b9 tried to finish but ServiceManager not started
+2022-06-17T20:27:55,674-0300 [30702 15] com.newrelic.agent.core.CoreServiceImpl INFO: New Relic Agent has shutdown

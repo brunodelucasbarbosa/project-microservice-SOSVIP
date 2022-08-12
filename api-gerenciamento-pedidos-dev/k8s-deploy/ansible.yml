@@ -1,0 +1,12 @@
+- hosts: all
+  tasks:
+    - name: "Deploy app"
+      copy:
+        src: "deploy.yml"
+        dest: "/home/ubuntu/grupo01"
+
+    - name: "kubectl apply"
+      shell: kubectl apply -f /home/ubuntu/grupo01/deploy.yml -n grupo01
+
+    - name: "delete deploy file"
+      shell: rm /home/ubuntu/grupo01/deploy.yml -f

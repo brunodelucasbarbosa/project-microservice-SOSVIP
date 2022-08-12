@@ -1,0 +1,82 @@
+DESAFIO
+* Criar api de administrador que gere um webtoken
+    * Campos: 
+        * Id
+        * nome 
+        * email 
+        * senha
+* Criar api de cliente
+    * GET  -  Listar Cliente
+    * POST - Cadastrar Cliente
+    * Campos: 
+        * Id
+        * nome
+        * cpf 
+        * telefone
+        * email
+        * dataNascimento
+* Criar api de pedido
+    * GET  -  Listar Pedidos
+    * POST - Cadastrar Cliente
+    * Campos: 
+        * Id
+        * usuario_id
+        * valor total
+        * descrição dos produtos
+        * data pedido
+        * status
+* Mandar email de confirmação de pedido confirmado para cliente  por SES
+* Colocar newRelic nas aplicações
+* Criar Front-End em React web / Kotlin android(Extra)
+    * Pagina Login Administrador
+    * Pagina Clientes
+        * Modal Criar Pedido
+        * Modal Criar/Editar/Excluir Cliente 
+        * Lista Pedidos Por Clientes (Extra)
+    * Pagina Pedidos
+        * Lista de pedidos
+* Criar pipeline em cada projeto com deploy em kubernets
+    * Criar arquivo YML com script da pipeline
+    * Criar Repositorios no DockerHub
+    * 
+
+- Equipe
+*     Alessandra Luisi - Full-Stack
+*     Bianca Andrade - Back-End
+*     Bruno Lucas - Full-Stack
+*     Ítalo Costa - Full-Stack (Líder)
+*     Rogerio Fidencio - Back-End
+*     Vitor Eleotério - Front-End
+
+
+-Canais de comunicação 
+* Discord
+* Slack
+* Meet
+* Zoom
+* Jira
+
+-BACK-END
+- [ ] Tecnologias
+*         PosgresSQL
+*         RDS
+*         GitLab
+* 	Maven
+* 	Docker
+* 	JAVA - SPRING BOOT		
+* 	SES - (mandar email de confirmação de pedido)
+* 	SQS - (Intermediario entre api de cliente para o  api de Pedidos)
+* 	New Relic
+* 	kubernetes
+*         TOKEN JWT (Bearer token)
+*         JSON
+*         Testes Unitários
+*         HS256( Encriptação)
+		
+
+-FRONT-END
+- [ ] Tecnologias
+*          React
+*          Kotlin
+*          Netlfy         
+		

@@ -1,0 +1,27 @@
+image: node
+
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  artifacts:
+    paths: 
+      - ./build
+  script:
+    - npm install
+    - npm run build
+
+deploy:
+  stage: deploy
+  environment:
+    name: production
+    url: https://sosvip.netlify.app/
+  only:
+    - dev
+  script:
+    - npm i
+    - npm run build
+    - npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod

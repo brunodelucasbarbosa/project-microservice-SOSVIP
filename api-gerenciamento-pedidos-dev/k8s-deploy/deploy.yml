@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-order
+  namespace: grupo01
+  labels:
+    app: api-order
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-order
+  template:
+    metadata:
+      name: api-order
+      labels:
+        app: api-order
+    spec:
+      containers:
+        - name: api-order
+          image: brunodelucasbarbosa/api-gerenciamento-pedidos
+          ports:
+            - containerPort: 8080
+          env:
+            - name: TOKEN_VERIFY_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: grupo01-rds
+                  key: TOKEN_VERIFY_URL
+            - name: DATABASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: grupo01-rds
+                  key: DATABASE_URL
+            - name: DATABASE_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: grupo01-rds
+                  key: DATABASE_ORDER
+            - name: DATABASE_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: grupo01-rds
+                  key: DATABASE_USER
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: grupo01-rds-secret
+                  key: DATABASE_PASSWORD
+            - name: TOKEN_PREFIX
+              value: "<TOKEN-PREFIX>"
+            - name: AWS_ACCESS_KEY
+              value: "<AWS-ACCESS-KEY>"
+            - name: AWS_SECRET_KEY
+              value: "<AWS-SECRET-KEY>"
+            - name: AWS_ACCOUNT_ID
+              value: "<AWS-ACCOUNT-ID>"
+            - name: AWS_EMAIL_SENDER
+              value: "<AWS-EMAIL-SENDER>"

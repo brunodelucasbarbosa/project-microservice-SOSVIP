@@ -1,0 +1,8 @@
+- hosts: all
+
+  tasks:
+    - name: "Deploy app"
+      copy:
+        src: "deploy.yml"
+        dest: "/home/ubuntu/grupo01"
+      become: yes
